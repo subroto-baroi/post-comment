@@ -29,7 +29,7 @@ const Post = (props) => {
   
   const postStyle = {    
     margin: "0px 10px 20px 200px",
-    backgroundColor:'#1DA1F2',
+    backgroundColor:'#FF671C',
     borderRadius: "10px",
     padding: "20px",     
      width:'750px'
