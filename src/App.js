@@ -22,9 +22,7 @@ function App() {
         <Route path="/post/:postId">
             <PostDetail/>
         </Route>
-        <Route path="/comment/:commentId">
-          <CommentDtl/>
-        </Route>
+       
         <Route exact path="/">
           <Home/>
         </Route>

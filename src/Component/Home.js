@@ -10,9 +10,15 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setPosts(data))
     }, []);
+        const stylePostId ={
+            textAlign: 'center',
+            color: '#D23888',            
+            backgroundColor: '#17CAA0',
+            borderRadius:"4px"
+        }
     return (
         <div>
-            <h1 style={{textAlign: 'center',color: '#D23888'}}>Total Posts :{posts.length} </h1>
+            <h1 style={stylePostId}>Total Posts :{posts.length} </h1>
             {
                 posts.map(post => <Post post={post}></Post> )
             }

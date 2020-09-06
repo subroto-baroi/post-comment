@@ -48,18 +48,15 @@ const Post = (props) => {
           </Typography>
           <Typography variant="h5" component="h4">
             Click the button to see the Details of the users post and comment.          
-          </Typography>
-          <Typography className={classes.pos} color="textSecondary">
+          </Typography>          
           
-          
-          </Typography>
-          
-        </CardContent>
-        <CardActions>
-            <Link to={`/post/${id}`}><Button align="center" variant="contained" color="primary">Detail of id : {id}</Button></Link>
-          
-        </CardActions>
+          </CardContent>
+          <CardActions>
+              <Link to={`/post/${id}`}><Button align="center" variant="contained" color="primary">Detail of id : {id}</Button></Link>
+            
+          </CardActions>
       </Card>
+      
     </div>
   );
 };

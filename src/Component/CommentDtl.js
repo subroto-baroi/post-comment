@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 
-const CommentDtl = () => {
-    const {commentId}=useParams();
-    const [comment, setComment]=useState({})
-    useEffect(() => {
-        const url =`https://jsonplaceholder.typicode.com/comments?postId=${commentId}`
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setComment(data))
-    },[]);
+
+const CommentDtl = (props) => {
+    const {id, name, email,body}=props.comment;
+    
     return (
-        <div>
-            <h1>Comment details :{commentId} </h1>
-            <h2>Name :{comment.name} </h2>
-            <h3>Email :{comment.email} </h3>
-            <h4>Body :{comment.body}</h4>
+        <div style={{borderBottom:'1px solid orange'}}>            
+            <h3>Id No : {id} </h3>
+            <h4>Name : {name} </h4>
+            <h5>Email : {email} </h5>
+            <h6>Body : {body}</h6> 
+
         </div>
     );
 };
